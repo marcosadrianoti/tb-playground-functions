@@ -18,8 +18,8 @@ function splitSentence(myString) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(myArray) {
+  return myArray[myArray.length - 1] + ", " + myArray[0];
 }
 
 // Desafio 5
