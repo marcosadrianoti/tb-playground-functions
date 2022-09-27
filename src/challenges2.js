@@ -22,18 +22,26 @@ function generatePhoneNumber(array) {
       let phoneNumber = '';
     }
     return '(' + array[0] + array[1] + ')'
-    + ' ' + array[2] + array[3] + array[4] + array[5] + array[6]
-    + '-' +  + array[7] + array[8] + array[9] + array[10];
-
-
+      + ' ' + array[2] + array[3] + array[4] + array[5] + array[6]
+      + '-' + + array[7] + array[8] + array[9] + array[10];
   }
 }
 
-// console.log(generatePhoneNumber([0, 2, 3, 4, 5, 2, 7, 2, 9, 9, 4]));
-
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let menorQueSomaLadosOpostos = false;
+  let maiorQueDiferencaAbsLadosOpostos = false;
+  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB) {
+    menorQueSomaLadosOpostos = true;
+  }
+  if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB)) {
+    maiorQueDiferencaAbsLadosOpostos = true;
+  }
+  if (maiorQueDiferencaAbsLadosOpostos == true && menorQueSomaLadosOpostos == true) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 13
