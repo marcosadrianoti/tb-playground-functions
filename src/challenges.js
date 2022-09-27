@@ -91,14 +91,77 @@ function fizzBuzz(array) {
   }
   return newArray;
 }
-// console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(myString) {
+  let novaString = '';
+
+  for (let letra of myString) {
+    let letraSubstitutida = '';
+    switch (letra) {
+      case 'a':
+        letraSubstitutida = '1';
+        break;
+      case 'e':
+        letraSubstitutida = '2';
+        break;
+      case 'i':
+        letraSubstitutida = '3';
+        break;
+      case 'o':
+        letraSubstitutida = '4';
+        break;
+      case 'u':
+        letraSubstitutida = '5';
+        break;
+    
+      default:
+        break;
+    }
+    if (letraSubstitutida != ''){
+      novaString += letraSubstitutida;
+    }else{
+      novaString += letra;
+    }
+  }
+
+  return novaString;
 }
-function decode() {
-  // seu código aqui
+// console.log(encode('amarei'));
+
+function decode(myString) {
+  let novaString = '';
+
+  for (let letra of myString) {
+    let letraSubstitutida = '';
+    switch (letra) {
+      case '1':
+        letraSubstitutida = 'a';
+        break;
+      case '2':
+        letraSubstitutida = 'e';
+        break;
+      case '3':
+        letraSubstitutida = 'i';
+        break;
+      case '4':
+        letraSubstitutida = 'o';
+        break;
+      case '5':
+        letraSubstitutida = 'u';
+        break;
+    
+      default:
+        break;
+    }
+    if (letraSubstitutida != ''){
+      novaString += letraSubstitutida;
+    }else{
+      novaString += letra;
+    }
+  }
+
+  return novaString;
 }
 
 // Desafio 10
