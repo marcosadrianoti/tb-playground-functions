@@ -43,7 +43,7 @@ function highestCount(array) {
   let qtVezesNumeroMaior = 0;
   let maiorNumero = (Object.keys(itensObjet))[0];
   for (let key in itensObjet) {
-    if (parseInt(key) >= maiorNumero){
+    if (parseInt(key) >= maiorNumero) {
       maiorNumero = key;
       qtVezesNumeroMaior = itensObjet[key]
     }
@@ -56,29 +56,42 @@ function catAndMouse(mouse, cat1, cat2) {
   let distCat1;
   if (cat1 - mouse < 0) {
     distCat1 = (cat1 - mouse) * -1;
-  }else{
+  } else {
     distCat1 = cat1 - mouse
   }
   let distCat2;
   if (cat2 - mouse < 0) {
     distCat2 = (cat2 - mouse) * -1;
-  }else{
+  } else {
     distCat2 = cat2 - mouse
   }
-  
-  if (distCat1 < distCat2){
+
+  if (distCat1 < distCat2) {
     return 'cat1';
-  }else if( distCat2 < distCat1){
+  } else if (distCat2 < distCat1) {
     return 'cat2';
-  }else{
+  } else {
     return 'os gatos trombam e o rato foge';
   }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  newArray = [];
+  for (let number of array) {
+    if (number % 3 == 0 && number % 5 == 0) {
+      newArray.push('fizzBuzz');
+    } else if (number % 3 == 0) {
+      newArray.push('fizz');
+    } else if (number % 5 == 0) {
+      newArray.push('buzz');
+    } else {
+      newArray.push('bug!');
+    };
+  }
+  return newArray;
 }
+// console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
 function encode() {
