@@ -45,8 +45,18 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let sum = 0;
+  for (const iterator of string) {
+    if (parseInt(iterator) > 0) {
+      sum += parseInt(iterator);
+    }
+  }
+  if (sum == 1) {
+    return sum + ' copo de água';
+  } else {
+    return sum + ' copos de água';
+  }
 }
 
 module.exports = {
