@@ -114,20 +114,19 @@ function encode(myString) {
       case 'u':
         letraSubstitutida = '5';
         break;
-    
+
       default:
         break;
     }
-    if (letraSubstitutida != ''){
+    if (letraSubstitutida != '') {
       novaString += letraSubstitutida;
-    }else{
+    } else {
       novaString += letra;
     }
   }
 
   return novaString;
 }
-// console.log(encode('amarei'));
 
 function decode(myString) {
   let novaString = '';
@@ -150,13 +149,13 @@ function decode(myString) {
       case '5':
         letraSubstitutida = 'u';
         break;
-    
+
       default:
         break;
     }
-    if (letraSubstitutida != ''){
+    if (letraSubstitutida != '') {
       novaString += letraSubstitutida;
-    }else{
+    } else {
       novaString += letra;
     }
   }
@@ -165,8 +164,19 @@ function decode(myString) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techArray, name) {
+  let arrayDeObjetos = [];
+  if (techArray.length == 0) {
+    return 'Vazio!'
+  } else {
+    for (let tech of techArray.sort()) {
+      arrayDeObjetos.push({
+        'tech': tech,
+        'name': name
+      })
+    }
+  }
+  return arrayDeObjetos;
 }
 
 module.exports = {
