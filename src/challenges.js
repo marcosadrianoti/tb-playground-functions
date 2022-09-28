@@ -51,20 +51,6 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
-  
-  let distCat1 = calcDistancia(cat1, mouse);
-  let distCat2 = calcDistancia(cat2, mouse);
-
-  if (distCat1 < distCat2) {
-    return 'cat1';
-  } else if (distCat2 < distCat1) {
-    return 'cat2';
-  } else {
-    return 'os gatos trombam e o rato foge';
-  }
-}
-
 function calcDistancia(cat, mouse) {
   let distCat;
   if (cat - mouse < 0) {
@@ -74,20 +60,32 @@ function calcDistancia(cat, mouse) {
   }
   return distCat;
 }
+function catAndMouse(mouse, cat1, cat2) {
+  let distCat1 = calcDistancia(cat1, mouse);
+  let distCat2 = calcDistancia(cat2, mouse);
+  if (distCat1 < distCat2) {
+    return 'cat1';
+  } else if (distCat2 < distCat1) {
+    return 'cat2';
+  } else {
+    return 'os gatos trombam e o rato foge';
+  }
+}
+
 
 // Desafio 8
 function fizzBuzz(array) {
-  newArray = [];
+  let newArray = [];
   for (let number of array) {
-    if (number % 3 == 0 && number % 5 == 0) {
+    if (number % 3 === 0 && number % 5 === 0) {
       newArray.push('fizzBuzz');
-    } else if (number % 3 == 0) {
+    } else if (number % 3 === 0) {
       newArray.push('fizz');
-    } else if (number % 5 == 0) {
+    } else if (number % 5 === 0) {
       newArray.push('buzz');
     } else {
       newArray.push('bug!');
-    };
+    }
   }
   return newArray;
 }
@@ -95,7 +93,6 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(myString) {
   let novaString = '';
-
   for (let letra of myString) {
     let letraSubstitutida = '';
     switch (letra) {
@@ -114,7 +111,6 @@ function encode(myString) {
       case 'u':
         letraSubstitutida = '5';
         break;
-
       default:
         break;
     }
@@ -124,13 +120,11 @@ function encode(myString) {
       novaString += letra;
     }
   }
-
   return novaString;
 }
 
 function decode(myString) {
   let novaString = '';
-
   for (let letra of myString) {
     let letraSubstitutida = '';
     switch (letra) {
@@ -149,7 +143,6 @@ function decode(myString) {
       case '5':
         letraSubstitutida = 'u';
         break;
-
       default:
         break;
     }
@@ -159,7 +152,6 @@ function decode(myString) {
       novaString += letra;
     }
   }
-
   return novaString;
 }
 
