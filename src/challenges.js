@@ -158,13 +158,13 @@ function decode(myString) {
 // Desafio 10
 function techList(techArray, name) {
   let arrayDeObjetos = [];
-  if (techArray.length == 0) {
-    return 'Vazio!'
+  if (techArray.length === 0) {
+    return 'Vazio!';
   } else {
     for (let tech of techArray.sort()) {
       arrayDeObjetos.push({
-        'tech': tech,
-        'name': name
+        tech: tech,
+        name: name
       })
     }
   }
