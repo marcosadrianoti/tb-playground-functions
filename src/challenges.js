@@ -14,12 +14,12 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(myString) {
-  return myString.split(" ");
+  return myString.split(' ');
 }
 
 // Desafio 4
 function concatName(myArray) {
-  return myArray[myArray.length - 1] + ", " + myArray[0];
+  return myArray[myArray.length - 1] + ', ' + myArray[0];
 }
 
 // Desafio 5
@@ -29,12 +29,11 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let qtItem = 0;
   let itensObjet = {};
   for (let number of array) {
     let qt = 0;
     for (let iterator of array) {
-      if (number == iterator) {
+      if (number === iterator) {
         qt += 1;
       }
     }
@@ -45,7 +44,7 @@ function highestCount(array) {
   for (let key in itensObjet) {
     if (parseInt(key) >= maiorNumero) {
       maiorNumero = key;
-      qtVezesNumeroMaior = itensObjet[key]
+      qtVezesNumeroMaior = itensObjet[key];
     }
   }
   return qtVezesNumeroMaior;
@@ -53,18 +52,9 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distCat1;
-  if (cat1 - mouse < 0) {
-    distCat1 = (cat1 - mouse) * -1;
-  } else {
-    distCat1 = cat1 - mouse
-  }
-  let distCat2;
-  if (cat2 - mouse < 0) {
-    distCat2 = (cat2 - mouse) * -1;
-  } else {
-    distCat2 = cat2 - mouse
-  }
+  
+  let distCat1 = calcDistancia(cat1, mouse);
+  let distCat2 = calcDistancia(cat2, mouse);
 
   if (distCat1 < distCat2) {
     return 'cat1';
@@ -73,6 +63,16 @@ function catAndMouse(mouse, cat1, cat2) {
   } else {
     return 'os gatos trombam e o rato foge';
   }
+}
+
+function calcDistancia(cat, mouse) {
+  let distCat;
+  if (cat - mouse < 0) {
+    distCat = (cat - mouse) * -1;
+  } else {
+    distCat = cat - mouse;
+  }
+  return distCat;
 }
 
 // Desafio 8
